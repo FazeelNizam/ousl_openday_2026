@@ -1,0 +1,10 @@
+# Install picamera2 and opencv via apt instead (they need system libcamera/Qt
+# bindings that pip wheels don't provide well on Raspberry Pi OS):
+#   sudo apt install -y python3-picamera2 python3-opencv --no-install-recommends
+#
+# Then, in a venv created with --system-site-packages, pip install the rest:
+ultralytics
+easyocr
+RPLCD
+smbus2
+numpy

@@ -1,0 +1,17 @@
+# Install picamera2, opencv, and RPi.GPIO via apt instead (they need system
+# libcamera/Qt bindings and kernel access that pip wheels don't handle well
+# on Raspberry Pi OS):
+#   sudo apt install -y python3-picamera2 python3-opencv python3-rpi.gpio --no-install-recommends
+#
+# For smooth servo pulses, install and enable the pigpio daemon:
+#   sudo apt install -y pigpio python3-pigpio
+#   sudo systemctl enable pigpiod
+#   sudo systemctl start pigpiod
+#
+# Then, in a venv created with --system-site-packages, pip install the rest:
+ultralytics
+easyocr
+RPLCD
+gpiozero
+pigpio
+numpy
